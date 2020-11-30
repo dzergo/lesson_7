@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sentence = "строка",
+            number = 10;
+        function padString(word, stringLength, symbol, flag) {
+            if(stringLength > word.length) {
+                var add = stringLength-word.length;
+                if (flag == true) {
+                    for (let i = 0; i < add; i++) {
+                        word = symbol + word;
+                    }
+                }
+                else {
+                    for (let i = 0; i < add; i++) {
+                        word += symbol;                       
+                    }
+                }
+            }
+            return word;
+        }
+
+        alert(padString("word", 7, "-", false));
+    </script>
+</body>
+</html>
